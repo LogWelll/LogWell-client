@@ -1,7 +1,7 @@
 # LogWell-client
 
 ## Introduction
-LogWell-client is a hassle-free Python client to send logs to an instance of [LogWell-service](https://github.com/amirberenji1995/logWell).  
+LogWell-client is a hassle-free Python client to send logs to an instance of [LogWell-service](https://github.com/LogWelll/LogWell-service).  
 LogWell-client is for you, if you are determined to use LogWell-service to stash your logs and want to avoid plain HTTP calls every now and then throughout your code base.
 
 ## Features
@@ -10,8 +10,11 @@ LogWell-client is for you, if you are determined to use LogWell-service to stash
 3. Compatible with Python’s built-in `logging` module through a custom handler
 
 ## Installation
+Install the LogWell-client using the following command:
 
-
+```bash
+pip install logwell-client
+```
 
 ## Log Schema
 
@@ -50,8 +53,8 @@ LogWell-client can be either used at client-level or as a custom handler to be a
 
   - #### Synchronous client:
     ```python
-    from log_writing_client.src.client import SyncLogClient
-    from log_writing_client.src.schema import LogCreateSchema
+    from logwell_client.client import SyncLogClient
+    from logwell_client.schema import LogCreateSchema
 
     client = SyncLogClient(base_url="http://localhost:8000/", api_key="key1", tenant="tenant1")
 
@@ -74,8 +77,8 @@ LogWell-client can be either used at client-level or as a custom handler to be a
 - #### Asynchronous client:
     ```python
     import asyncio
-    from log_writing_client.src.client import AsyncLogClient, Endpoint
-    from log_writing_client.src.schema import LogCreateSchema
+    from logwell_client.client import AsyncLogClient, Endpoint
+    from logwell_client.schema import LogCreateSchema
 
     async def main():
         client = AsyncLogClient(base_url="http://localhost:8000/", api_key="key1", tenant="tenant1")
@@ -102,7 +105,7 @@ LogWell-client also provides a `logging.Handler` implementation to seamlessly in
 
 ```python
 import logging
-from log_writing_client.src.handler import LogServiceHandler
+from logwell_client.handler import LogServiceHandler
 
 logger = logging.getLogger("my-app")
 logger.setLevel(logging.DEBUG)
