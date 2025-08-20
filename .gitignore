@@ -1,1 +1,5 @@
 */__pycache__
+.venv/
+*.whl
+*.egg-info/
+dist/

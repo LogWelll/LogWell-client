@@ -1,6 +1,5 @@
 import logging
-from src.handler import LogServiceHandler
-from src.schema import Endpoint
+from logwell_client.handler import LogServiceHandler, Endpoint
 
 # Configure root logger
 logger = logging.getLogger("my-app")
