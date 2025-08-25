@@ -251,7 +251,7 @@ Below, examples to retrieve logs through different query options are provided:
 The asynchronous client uses absolutely similar interface to communicate with, except that executing asynchronous functions are more complicated. Below is an example to try out log retrieval using the asynchronous client.
 
 ```python
-from logwell_client.client import SyncLogClient
+from logwell_client.client import AsyncLogClient
 import asyncio
 
 AsyncLogClient = AsyncLogClient(
