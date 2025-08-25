@@ -3,3 +3,4 @@
 *.whl
 *.egg-info/
 dist/
+example.py

@@ -1,6 +1,6 @@
 [project]
 name = "logwell-client"
-version = "0.1.0"
+version = "0.1.1"
 authors = [{ name = "Amirhossein Berenji", email = "ahberenji@gmail.com" }]
 description = "A hassle-free client to send logs to LogWell-service"
 readme = "README.md"
